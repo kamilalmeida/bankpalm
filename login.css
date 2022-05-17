@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+
+    height: 100vh;
+    background-image: linear-gradient(to top, #1E0554, #370C8B, #3F0D85, #4A0F7E, #561076, #79145F, #901750, #AA1B3F, #C61E2D, #c41e2fee, #cb1f2bef, #cf1f28f8, #D92121);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.container {
+
+    background-color: white;
+    width: 470px;
+    height: 380px;
+    padding: 4rem 1rem 1rem;
+    box-shadow: 4px 4px 7px #ffffff3d;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input-field ::placeholder {
+    margin-bottom: 0.2em;
+    color: #A79E9E;
+    font-weight: bold;
+    font-size: 1rem;
+    display: block;
+
+
+}
+
+
+.input-field input {
+    outline: none;
+    width: 350px;
+    height: 52px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border: 0;
+    background-color: #FFF9FB;
+    border-bottom: #c02ace73 solid 2px;
+    border-radius: 3px 3px 0px 0px;
+    color: #626262;
+    padding: 1rem;
+
+}
+
+main {
+
+    margin-bottom: 60px;
+}
+
+.img-logo {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+
+}
+
+.img-logo h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #FFF;
+    text-shadow: #0000007e 4px 4px 4px;
+}
+
+input[type="text"]:focus {
+    border: solid 1px #CFCFCF;
+    border-bottom: #c02ace solid 2px;
+
+}
+p {
+    color: #fff;
+}
+
+.botao {
+    font-size: 1rem;
+    margin-top: 2rem;
+    padding: 0.4rem;
+    background-image: linear-gradient(to top, #e3141ece, #9719a3e3);
+    border: 0;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    width: 350px;
+    height: 52px;
+
+}
+
+.botao a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.res {
+
+    background-color: rgba(245, 7, 7, 0.192);
+    color: rgb(252, 0, 0);
+    font-weight: bold;
+    text-align: center;
+    width: 350px;
+    font-size: 1rem;
+    margin-top: 10px;
+
+}

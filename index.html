@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/Vector.png" />
+  <link rel="stylesheet" href="login.css" />
+  <title>SitBank</title>
+</head>
+
+<body>
+  <main class="conteudo">
+    <div class="img-logo">
+      <img src="/img/log.png" alt="logo" />
+      <h1>ank palm</h1>
+    </div>
+
+    <div class="container">
+      <form action="">
+        <div class="input-field">
+          <input type="text" id="nome" required="required" name="text" placeholder="Digite seu nome" />
+        </div>
+      </form>
+      <div class="input-field">
+        <input type="text" id="cheque-especial" required placeholder="Limite do cheque especial" />
+      </div>
+      <button onclick="criarConta()" class="botao">
+        <a role="button">Criar conta</a>
+      </button>
+      <div id="resposta"></div>
+    </div>
+  </main>
+</body>
+
+<script src="script.js"></script>
+
+</html>
