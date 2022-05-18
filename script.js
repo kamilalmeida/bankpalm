@@ -33,15 +33,17 @@ async function criarConta() {
     resposta.innerHTML = `Por favor, preencha o campo nome`;
   }
 
-}
-
-function load() {
-  if (window.location.pathname == "/transacoes.html") {
-    console.log('oi');
-    getContentPorId();
-  }
+  getContentPorId();
 
 }
+
+// function load() {
+//   if (window.location.pathname == "/transacoes.html") {
+//     console.log('oi');
+
+//   }
+
+// }
 
 window.onload = load;
 
