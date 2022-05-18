@@ -32,6 +32,7 @@ async function criarConta() {
     resposta.classList.add("res");
     resposta.innerHTML = `Por favor, preencha o campo nome`;
   }
+  load()
 
 }
 
@@ -43,7 +44,7 @@ function load() {
 
 }
 
-window.onload = load;
+// window.onload = load;
 
 //PEGAR USUÁRIO POR ID
 
