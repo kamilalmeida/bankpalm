@@ -20,7 +20,7 @@ async function criarConta() {
 
 
     try {
-      const response = await fetch("https://app-api-aplication.herokuapp.com/", init);
+      const response = await fetch("https://app-api-aplication.herokuapp.com/accounts", init);
       const dados = await response.json();
       window.location.href = `https://app-api-aplication.herokuapp.com?id=${dados.id}`;
       //console.log(dados);
