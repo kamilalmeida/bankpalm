@@ -33,17 +33,15 @@ async function criarConta() {
     resposta.innerHTML = `Por favor, preencha o campo nome`;
   }
 
-  getContentPorId();
-
 }
 
-// function load() {
-//   if (window.location.pathname == "/transacoes.html") {
-//     console.log('oi');
+function load() {
+  if (window.location.pathname == "https://aplicacao-web.vercel.app/transacoes.html") {
+    console.log('oi');
+    getContentPorId();
+  }
 
-//   }
-
-// }
+}
 
 window.onload = load;
 
