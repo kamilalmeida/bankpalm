@@ -36,7 +36,7 @@ async function criarConta() {
 }
 
 function load() {
-  if (window.location.pathname == "https://aplicacao-web.vercel.app/transacoes.html") {
+  if (window.location.pathname == "/transacoes.html") {
     getContentPorId();
   }
 
