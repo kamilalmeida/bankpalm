@@ -44,38 +44,12 @@ function load() {
 
 }
 
-// window.onload = load;
+window.onload = load;
 
 //PEGAR USUÁRIO POR ID
 
 async function getContentPorId() {
-  let pegarParametro = new URLSearchParams(location.search);
-  let parametroId = pegarParametro.get("id");
-  console.log(parametroId);
-
-  const init = {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  };
-
-  // chamar GET na API
-
-  const response = await fetch(`https://app-api-aplication.herokuapp.com/accounts/${parametroId}`, init);
-  const dados = await response.json();
-  console.log(dados);
-
-  const nomeUser = dados.name;
-  const valorSaldo = dados.currentBalance;
-  const chequeEspecial = dados.overdraftProtection
-  console.log(chequeEspecial);
-  const elementoChequeEspecial = document.getElementById("cheque-especial")
-  elementoChequeEspecial.innerHTML = chequeEspecial.toFixed(2).replace(".",",")
-  const elementoNomeuser = document.getElementById("nome-user");
-  elementoNomeuser.innerHTML = `Olá, ${nomeUser}`;
-  const elementSaldo = document.getElementById("saldo");
-  elementSaldo.innerHTML = valorSaldo;
+  console.log('olaaaaaa');
 
   gerarHTML(dados);
   handleChange(dados);
