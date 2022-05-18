@@ -68,6 +68,8 @@ async function getContentPorId() {
 
   const nomeUser = dados.name;
   console.log(nomeUser);
+  const name = document.getElementById('nome-user')
+  name.innerHTML = nomeUser
 
   gerarHTML(dados);
   handleChange(dados);
