@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/logo (2).png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="transacoes.css" />
+  <title>Bank palm</title>
+</head>
+
+<body>
+  <main>
+    <section class="principal">
+      <div class="img-logo">
+        <img src="/img/log.png" alt="" />
+        <h1 class="gradient">ank palm</h1>
+      </div>
+      <div id="form-geral">
+        <div class="campo">
+          <label for="transacao-valor" id="textlabel">Digite o valor do seu depósito</label>
+          <input type="text" id="transacao-valor" required />
+        </div>
+        <div>
+          <button class="botao" id="botaoPrincipal" onclick="fazerDeposito()">
+            Fazer depósito
+          </button>
+          <button class="botao display-none" id="botaoPrincipal2" onclick="fazerSaque()">
+            Fazer saque
+          </button>
+        </div>
+        <div id="res" class="res"></div>
+        <div id="res2" class="resp"></div>
+      </div>
+      <div class="botoes">
+        <div id="bnt1" class="button-actived" onclick="transacaoDeposito()">
+          <p>Realizar depósitos</p>
+        </div>
+        <div id="bnt2" onclick="transacaoSaque()">
+          <p>Realizar saques</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="dados">
+      <div class="layout-2">
+        <div class="informacoes">
+          <strong id="nome-user"></strong>
+          <div class="saldo">
+            <p>Saldo atual:</p>
+            <strong id="saldo"></strong>
+          </div>
+          <div class="cheque-especial">
+            <p>cheque especial:</p>
+            <strong id="cheque-especial">00</strong>
+          </div>
+        </div>
+      </div>
+      <div class="transacoes-geral">
+        <strong>Últimas transações</strong>
+        <div class="transacoes" id="transacoesDep">
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+<script src="script.js"></script>
+
+</html>

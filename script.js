@@ -20,9 +20,9 @@ async function criarConta() {
 
 
     try {
-      const response = await fetch("http://localhost:4567/accounts/", init);
+      const response = await fetch("https://app-api-aplication.herokuapp.com/", init);
       const dados = await response.json();
-      window.location.href = `http://localhost:3000/transacoes.html?id=${dados.id}`;
+      window.location.href = `https://app-api-aplication.herokuapp.com?id=${dados.id}`;
       //console.log(dados);
     } catch (error) {
       console.error("erro");
@@ -36,7 +36,7 @@ async function criarConta() {
 }
 
 function load() {
-  if (window.location.pathname == "/transacoes.html") {
+  if (window.location.pathname == "https://aplicacao-web.vercel.app/transacoes.html") {
     getContentPorId();
   }
 
@@ -60,7 +60,7 @@ async function getContentPorId() {
 
   // chamar GET na API
 
-  const response = await fetch(`http://localhost:4567/accounts/${parametroId}`, init);
+  const response = await fetch(`https://app-api-aplication.herokuapp.com/accounts/${parametroId}`, init);
   const dados = await response.json();
   console.log(dados);
 
@@ -100,7 +100,7 @@ async function fazerDeposito() {
     body: JSON.stringify(objConta),
   };
 
-  const response = await fetch(`http://localhost:4567/accounts/${parametroId}/deposit`, init);
+  const response = await fetch(`https://app-api-aplication.herokuapp.com/accounts/${parametroId}/deposit`, init);
   const dados = await response.json();
   console.log(dados);
 
@@ -130,7 +130,7 @@ async function fazerSaque() {
       body: JSON.stringify(objConta),
     };
 
-    const response = await fetch(`http://localhost:4567/accounts/${parametroId}/saque`, init);
+    const response = await fetch(`https://app-api-aplication.herokuapp.com/accounts/${parametroId}/saque`, init);
 
     const dados = await response.json();
     console.log(dados);
