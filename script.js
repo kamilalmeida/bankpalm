@@ -37,6 +37,7 @@ async function criarConta() {
 
 function load() {
   if (window.location.pathname == "/transacoes.html") {
+    console.log('oi');
     getContentPorId();
   }
 
