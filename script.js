@@ -49,7 +49,25 @@ window.onload = load;
 //PEGAR USUÁRIO POR ID
 
 async function getContentPorId() {
-  console.log('olaaaaaa');
+  let pegarParametro = new URLSearchParams(location.search);
+  let parametroId = pegarParametro.get("id");
+  console.log(parametroId);
+
+  const init = {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+  // chamar GET na API
+
+  const response = await fetch(`https://app-api-aplication.herokuapp.com/accounts/${parametroId}`, init);
+  const dados = await response.json();
+  console.log(dados);
+
+  const nomeUser = dados.name;
+  console.log(nomeUser);
 
   gerarHTML(dados);
   handleChange(dados);
