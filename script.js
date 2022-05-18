@@ -20,9 +20,9 @@ async function criarConta() {
 
 
     try {
-      const response = await fetch("https://app-api-aplication.herokuapp.com/accounts", init);
+      const response = await fetch("https://app-api-aplication.herokuapp.com/accounts/", init);
       const dados = await response.json();
-      window.location.href = `https://app-api-aplication.herokuapp.com?id=${dados.id}`;
+      window.location.href = `https://aplicacao-web.vercel.app/transacoes.html?id=${dados.id}`;
       //console.log(dados);
     } catch (error) {
       console.error("erro");
@@ -36,7 +36,7 @@ async function criarConta() {
 }
 
 function load() {
-  if (window.location.pathname == "/transacoes.html") {
+  if (window.location.pathname == "https://aplicacao-web.vercel.app/transacoes.html") {
     getContentPorId();
   }
 
