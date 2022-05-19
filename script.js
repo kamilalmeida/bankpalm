@@ -18,12 +18,11 @@ async function criarConta() {
       body: JSON.stringify(objConta),
     };
 
-
     try {
       const response = await fetch("https://app-api-aplication.herokuapp.com/accounts/", init);
       const dados = await response.json();
       window.location.href = `/transacoes.html?id=${dados.id}`;
-      //console.log(dados);
+      //
     } catch (error) {
       console.error("erro");
     }
@@ -32,13 +31,10 @@ async function criarConta() {
     resposta.classList.add("res");
     resposta.innerHTML = `Por favor, preencha o campo nome`;
   }
-  load()
-
 }
 
 function load() {
   if (window.location.pathname == "/transacoes.html") {
-    console.log('oi');
     getContentPorId();
   }
 
@@ -51,7 +47,6 @@ window.onload = load;
 async function getContentPorId() {
   let pegarParametro = new URLSearchParams(location.search);
   let parametroId = pegarParametro.get("id");
-  console.log(parametroId);
 
   const init = {
     method: "GET",
@@ -64,21 +59,17 @@ async function getContentPorId() {
 
   const response = await fetch(`https://app-api-aplication.herokuapp.com/accounts/${parametroId}`, init);
   const dados = await response.json();
-  console.log(dados);
+
 
   const nomeUser = dados.name;
-  console.log(nomeUser);
-  const name = document.getElementById('nome-user')
-  const valorSaldo = dados.currentBalance;
-  const chequeEspecial = dados.overdraftProtection
-  console.log(chequeEspecial);
-  const elementoChequeEspecial = document.getElementById("cheque-especial")
-  elementoChequeEspecial.innerHTML = chequeEspecial.toFixed(2).replace(".", ",")
   const elementoNomeuser = document.getElementById("nome-user");
   elementoNomeuser.innerHTML = `Olá, ${nomeUser}`;
   const elementSaldo = document.getElementById("saldo");
+  const valorSaldo = dados.currentBalance;
   elementSaldo.innerHTML = valorSaldo;
-  name.innerHTML = nomeUser
+  const chequeEspecial = dados.overdraftProtection
+  const elementoChequeEspecial = document.getElementById("cheque-especial")
+  elementoChequeEspecial.innerHTML = chequeEspecial.toFixed(2).replace(".", ",")
 
   gerarHTML(dados);
   handleChange(dados);
@@ -94,7 +85,6 @@ async function fazerDeposito() {
     data: gerarData(),
     tipo: "deposito",
   };
-  console.log(objConta);
 
   // chamar post por ID na API
   const init = {
@@ -107,7 +97,6 @@ async function fazerDeposito() {
 
   const response = await fetch(`https://app-api-aplication.herokuapp.com/accounts/${parametroId}/deposit`, init);
   const dados = await response.json();
-  console.log(dados);
 
   gerarHTML(dados);
   handleChange(dados);
@@ -124,7 +113,6 @@ async function fazerSaque() {
       data: gerarData(),
       tipo: "saque",
     };
-    // console.log(objConta);
 
     // chamar post por ID na API
     const init = {
@@ -136,9 +124,7 @@ async function fazerSaque() {
     };
 
     const response = await fetch(`https://app-api-aplication.herokuapp.com/accounts/${parametroId}/saque`, init);
-
     const dados = await response.json();
-    console.log(dados);
 
     const resposta = document.querySelector("div#res");
     const resposta2 = document.querySelector("div#res2");

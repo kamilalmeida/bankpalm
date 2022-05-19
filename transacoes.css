@@ -285,6 +285,7 @@ input[type="text"]:focus {
     height: 52px;
 }
 
+
 @media screen and (max-width: 1046px) {
     .layout-2 img {
         display: none;
