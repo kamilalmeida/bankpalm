@@ -296,13 +296,17 @@ input[type="text"]:focus {
 
 @media (min-width: 300px) and (max-width:768px) {
     body {
-        overflow-x: auto;
+        overflow-x: hidden;
         overflow-y: auto;
     }
 
     .principal {
         width: 100%;
         height: 55vh;
+    }
+
+    .res {
+        width: 300px;
     }
 
     .botoes {
@@ -321,7 +325,7 @@ input[type="text"]:focus {
 
     .dados {
         width: 100%;
-        margin-top: 100px;
+        margin-top: 232px;
     }
 
     #form-geral {
@@ -336,84 +340,79 @@ input[type="text"]:focus {
         width: 100%;
     }
 
-    .layout-2 {
-        margin-top: 73px;
+    @media (max-width: 1046px) {
+        .layout-2 img {
+            display: none;
+        }
+
+        .transacoes-all {
+            padding: 2rem 3rem;
+        }
+
+        .transacoes {
+            width: 100%;
+        }
+
+        #transacoes-all strong {
+            font-size: 1.2em;
+        }
+
+        .saque strong {
+            font-size: 1em;
+        }
+
+        .deposito strong {
+            font-size: 1em;
+        }
+
+        .deposito p {
+            font-size: 12px;
+        }
+
+        .saque p {
+            font-size: 12px;
+        }
+
+        .price strong {
+            font-size: 16px;
+        }
+
+        .price-saque strong {
+            font-size: 16px;
+        }
     }
-}
 
-@media (max-width: 1046px) {
-    .layout-2 img {
-        display: none;
+    /* aviso-successful */
+    .res {
+        opacity: 0;
+        background-color: #2dff992f;
+        color: #21c275;
+        font-weight: bold;
+        text-align: center;
+        width: 337px;
+        font-size: 1rem;
+        transition: 0.4s;
+        margin-top: 10px;
     }
 
-    .transacoes-all {
-        padding: 2rem 3rem;
+    .res.actived {
+        opacity: 1;
     }
 
-    .transacoes {
-        width: 100%;
+    /* aviso-error */
+    .resp {
+        opacity: 0;
+        background-color: rgba(245, 7, 7, 0.212);
+        color: rgb(252, 0, 0);
+        font-weight: bold;
+        text-align: center;
+        width: 337px;
+        font-size: 1rem;
+        transition: 0.4s;
+        margin-top: 10px;
+
     }
 
-    #transacoes-all strong {
-        font-size: 1.2em;
+    .resp.actived2 {
+        opacity: 1;
     }
-
-    .saque strong {
-        font-size: 1em;
-    }
-
-    .deposito strong {
-        font-size: 1em;
-    }
-
-    .deposito p {
-        font-size: 12px;
-    }
-
-    .saque p {
-        font-size: 12px;
-    }
-
-    .price strong {
-        font-size: 16px;
-    }
-
-    .price-saque strong {
-        font-size: 16px;
-    }
-}
-
-/* aviso-successful */
-.res {
-    opacity: 0;
-    background-color: #2dff992f;
-    color: #21c275;
-    font-weight: bold;
-    text-align: center;
-    width: 337px;
-    font-size: 1rem;
-    transition: 0.4s;
-    margin-top: 10px;
-}
-
-.res.actived {
-    opacity: 1;
-}
-
-/* aviso-error */
-.resp {
-    opacity: 0;
-    background-color: rgba(245, 7, 7, 0.212);
-    color: rgb(252, 0, 0);
-    font-weight: bold;
-    text-align: center;
-    width: 337px;
-    font-size: 1rem;
-    transition: 0.4s;
-    margin-top: 10px;
-
-}
-
-.resp.actived2 {
-    opacity: 1;
-}
