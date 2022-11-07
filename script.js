@@ -1,8 +1,6 @@
-
 async function criarConta() {
   const elementNome = document.getElementById("nome");
   const elementOverdraftProtection = document.getElementById("cheque-especial");
-
 
   if (elementNome.value != "") {
     let objConta = {
@@ -19,7 +17,10 @@ async function criarConta() {
     };
 
     try {
-      const response = await fetch("https://app-api-aplication.herokuapp.com/accounts/", init);
+      const response = await fetch(
+        "https://app-api-aplication.herokuapp.com/accounts/",
+        init
+      );
       const dados = await response.json();
       window.location.href = `/transacoes.html?id=${dados.id}`;
       //
@@ -37,7 +38,6 @@ function load() {
   if (window.location.pathname == "/transacoes.html") {
     getContentPorId();
   }
-
 }
 
 window.onload = load;
@@ -57,9 +57,11 @@ async function getContentPorId() {
 
   // chamar GET na API
 
-  const response = await fetch(`https://app-api-aplication.herokuapp.com/accounts/${parametroId}`, init);
+  const response = await fetch(
+    `https://app-api-aplication.herokuapp.com/accounts/${parametroId}`,
+    init
+  );
   const dados = await response.json();
-
 
   const nomeUser = dados.name;
   const elementoNomeuser = document.getElementById("nome-user");
@@ -67,9 +69,11 @@ async function getContentPorId() {
   const elementSaldo = document.getElementById("saldo");
   const valorSaldo = dados.currentBalance;
   elementSaldo.innerHTML = valorSaldo;
-  const chequeEspecial = dados.overdraftProtection
-  const elementoChequeEspecial = document.getElementById("cheque-especial")
-  elementoChequeEspecial.innerHTML = chequeEspecial.toFixed(2).replace(".", ",")
+  const chequeEspecial = dados.overdraftProtection;
+  const elementoChequeEspecial = document.getElementById("cheque-especial");
+  elementoChequeEspecial.innerHTML = chequeEspecial
+    .toFixed(2)
+    .replace(".", ",");
 
   gerarHTML(dados);
   handleChange(dados);
@@ -95,11 +99,16 @@ async function fazerDeposito() {
     body: JSON.stringify(objConta),
   };
 
-  const response = await fetch(`https://app-api-aplication.herokuapp.com/accounts/${parametroId}/deposit`, init);
+  const response = await fetch(
+    `https://app-api-aplication.herokuapp.com/accounts/${parametroId}/deposit`,
+    init
+  );
   const dados = await response.json();
 
   gerarHTML(dados);
   handleChange(dados);
+  document.getElementById("transacao-valor").value = "";
+
 }
 
 async function fazerSaque() {
@@ -107,7 +116,7 @@ async function fazerSaque() {
   let pegarParametro = new URLSearchParams(location.search);
   let parametroId = pegarParametro.get("id");
 
-  if (amount.value != '') {
+  if (amount.value != "") {
     const objConta = {
       amount: Number(amount.value),
       data: gerarData(),
@@ -123,7 +132,10 @@ async function fazerSaque() {
       body: JSON.stringify(objConta),
     };
 
-    const response = await fetch(`https://app-api-aplication.herokuapp.com/accounts/${parametroId}/saque`, init);
+    const response = await fetch(
+      `https://app-api-aplication.herokuapp.com/accounts/${parametroId}/saque`,
+      init
+    );
     const dados = await response.json();
 
     const resposta = document.querySelector("div#res");
@@ -136,19 +148,19 @@ async function fazerSaque() {
       }, 2000);
 
       resposta.innerHTML = `Saque realizado!`;
-
     } else {
       resposta2.classList.add("actived2");
       setTimeout(() => {
         resposta2.classList.remove("actived2");
       }, 2000);
 
-      resposta.classList.add("display-none")
+      resposta.classList.add("display-none");
 
       resposta2.innerHTML = `Saldo insuficiente!`;
     }
 
     gerarHTML(dados);
+    document.getElementById("transacao-valor").value = "";
   }
 }
 
@@ -156,8 +168,8 @@ function gerarHTML(dados) {
   const elementContainer2 = document.getElementById("transacoesDep");
   document.getElementById("transacoesDep").innerHTML = "";
   const elementSaldo = document.getElementById("saldo");
-  let saldoNumber = dados.currentBalance
-  let saldoString = saldoNumber.toFixed(2).replace(".", ",")
+  let saldoNumber = dados.currentBalance;
+  let saldoString = saldoNumber.toFixed(2).replace(".", ",");
   elementSaldo.innerHTML = `R$ ${saldoString}`;
 
   dados.arrayDeposit.forEach((dado) => {
@@ -167,7 +179,9 @@ function gerarHTML(dados) {
     <div class="saque">
         <strong>${dado.tipo == "deposito" ? "Depósito" : "Saque"}</strong>
         <p>${date}</p>
-        <div class="price ${dado.tipo == "deposito" ? "valor-deposito" : "valor-saque"}">
+        <div class="price ${
+          dado.tipo == "deposito" ? "valor-deposito" : "valor-saque"
+        }">
         <strong>R$ ${valorSaque}</strong>
         </div>
     </div>
@@ -199,8 +213,8 @@ function toggleClass(elementToAdd, classToAdd, elementToRevemo, classToRemove) {
 }
 
 function transacaoSaque() {
-  const textoSaque = document.getElementById("textlabel")
-  textoSaque.innerHTML = 'Digite o valor de saque'
+  const textoSaque = document.getElementById("textlabel");
+  textoSaque.innerHTML = "Digite o valor de saque";
   document.getElementById("botaoPrincipal2").classList.add("display-block");
   document.getElementById("botaoPrincipal2").classList.remove("display-none");
   document.getElementById("botaoPrincipal").classList.remove("display-block");
@@ -210,8 +224,8 @@ function transacaoSaque() {
 }
 
 function transacaoDeposito() {
-  const textoDeposito = document.getElementById("textlabel")
-  textoDeposito.innerHTML = 'Digite o valor de depósito'
+  const textoDeposito = document.getElementById("textlabel");
+  textoDeposito.innerHTML = "Digite o valor de depósito";
   document.getElementById("botaoPrincipal").classList.add("display-block");
   document.getElementById("botaoPrincipal").classList.remove("display-none");
   document.getElementById("botaoPrincipal2").classList.remove("display-block");
