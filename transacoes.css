@@ -13,7 +13,7 @@ body {
 
 .principal {
     height: 100vh;
-    margin-top: 70px;
+    margin-top: 48px;
     width: 50%;
     float: left;
 }
@@ -30,7 +30,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 59px;
 }
 
 .dados {
@@ -302,7 +302,7 @@ input[type="text"]:focus {
 
     .principal {
         width: 100%;
-        height: 55vh;
+        height: 39vh;
     }
 
     .res {
@@ -359,7 +359,7 @@ input[type="text"]:focus {
     }
 
     #form-geral {
-        margin-bottom: 60px;
+        margin-bottom: 32px;
     }
 
     #transacoes-geral {
