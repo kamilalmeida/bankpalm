@@ -18,7 +18,7 @@ async function criarConta() {
 
     try {
       const response = await fetch(
-        "https://app-api-aplication.herokuapp.com/accounts/",
+        "https://fly-builder-wispy-sun-2183.fly.dev/accounts/",
         init
       );
       const dados = await response.json();
@@ -58,7 +58,7 @@ async function getContentPorId() {
   // chamar GET na API
 
   const response = await fetch(
-    `https://app-api-aplication.herokuapp.com/accounts/${parametroId}`,
+    `https://fly-builder-wispy-sun-2183.fly.dev/accounts/${parametroId}`,
     init
   );
   const dados = await response.json();
@@ -100,7 +100,7 @@ async function fazerDeposito() {
   };
 
   const response = await fetch(
-    `https://app-api-aplication.herokuapp.com/accounts/${parametroId}/deposit`,
+    `https://fly-builder-wispy-sun-2183.fly.dev/accounts/${parametroId}/deposit`,
     init
   );
   const dados = await response.json();
@@ -133,7 +133,7 @@ async function fazerSaque() {
     };
 
     const response = await fetch(
-      `https://app-api-aplication.herokuapp.com/accounts/${parametroId}/saque`,
+      `https://fly-builder-wispy-sun-2183.fly.dev/accounts/${parametroId}/saque`,
       init
     );
     const dados = await response.json();
