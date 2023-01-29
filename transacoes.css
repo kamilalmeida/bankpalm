@@ -1,449 +1,441 @@
 * {
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    font-size: 16px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  font-size: 16px;
 }
 
 .principal {
-    height: 100vh;
-    margin-top: 48px;
-    width: 50%;
-    float: left;
+  height: 100vh;
+  margin-top: 48px;
+  width: 50%;
+  float: left;
 }
 
 #modo-geral {
-    display: block;
+  display: block;
 }
 
 .bnt {
-    margin-top: 60px;
+  margin-top: 60px;
 }
 
 #form-geral {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 59px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 59px;
 }
 
 .dados {
-    background-color: #f6f6f7;
-    width: 50%;
-    height: 100vh;
-    float: right;
-    display: block;
+  background-color: #f6f6f7;
+  width: 50%;
+  height: 100vh;
+  float: right;
+  display: block;
 }
 
 .layout-2 img {
-    margin: 3rem 6rem;
-    position: absolute;
-    top: 0;
-    right: 0;
+  margin: 3rem 6rem;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .layout-2 {
-    padding: 2rem 2rem;
-    border-bottom: solid 2px #d450e03f;
-    width: 100%;
-    height: 185px;
+  padding: 2rem 2rem;
+  border-bottom: solid 2px #d450e03f;
+  width: 100%;
+  height: 185px;
 }
 
 .saldo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 1em;
-    color: #312e2e;
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1em;
+  color: #312e2e;
 }
 
 .cheque-especial {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 1em;
-    color: #312e2e;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1em;
+  color: #312e2e;
 }
 
 .informacoes strong {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 .saldo p {
-    font-size: 1em;
-    font-weight: 500;
+  font-size: 1em;
+  font-weight: 500;
 }
 
 .saldo strong {
-    font-size: 1.7em;
-    color: #AC1EB9;
-    margin-left: 10px;
-
+  font-size: 1.7em;
+  color: #ac1eb9;
+  margin-left: 10px;
 }
 
 .cheque-especial strong {
-    font-size: 1.7em;
-    color: #AC1EB9;
-    margin-left: 10px;
+  font-size: 1.7em;
+  color: #ac1eb9;
+  margin-left: 10px;
 }
 
 .campo label {
-    margin-bottom: 0.2em;
-    color: #000000;
-    font-size: 1.1em;
-    display: block;
-    margin-bottom: 1rem;
-    font-weight: 600;
+  margin-bottom: 0.2em;
+  color: #000000;
+  font-size: 1.1em;
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .campo input {
-    outline: none;
-    width: 337px;
-    height: 52px;
-    margin-bottom: 1rem;
-    font-size: 1.1em;
-    border: 0;
-    background-color: #fff9fb;
-    border-bottom: #c02ace88 solid 2px;
-    border-radius: 3px 3px 0px 0px;
-    color: #626262;
+  outline: none;
+  width: 337px;
+  height: 52px;
+  margin-bottom: 1rem;
+  font-size: 1.1em;
+  border: 0;
+  background-color: #fff9fb;
+  border-bottom: #c02ace88 solid 2px;
+  border-radius: 3px 3px 0px 0px;
+  color: #626262;
 }
 
 .img-logo {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
-
 .gradient {
-    background-image: linear-gradient(to top, #E11212, #CE24B3, #D91953);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
+  background-image: linear-gradient(to top, #e11212, #ce24b3, #d91953);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h1 {
-    font-size: 35px;
+  font-size: 35px;
 }
 
 .botoes div {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    min-height: 70px;
-    background-color: #ffffff;
-    color: #66565cb2;
-    font-weight: bold;
-    font-size: 1rem;
-    text-align: center;
-    border-top: solid 2px rgba(0, 0, 0, 0.123);
-    border-right: solid 2px rgba(0, 0, 0, 0.123);
-    transition: 0.1s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  min-height: 70px;
+  background-color: #ffffff;
+  color: #66565cb2;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  border-top: solid 2px rgba(0, 0, 0, 0.123);
+  border-right: solid 2px rgba(0, 0, 0, 0.123);
+  transition: 0.1s;
 }
 
 .botoes div.button-actived {
-    background-image: linear-gradient(to top, #e3141ece, #9719a3e3);
-    color: #fff;
-    border: 0;
+  background-image: linear-gradient(to top, #e3141ece, #9719a3e3);
+  color: #fff;
+  border: 0;
 }
 
-
 .botoes div img {
-    padding-right: 5px;
+  padding-right: 5px;
 }
 
 .transacoes-all {
-    padding: 2rem 3rem;
+  padding: 2rem 3rem;
 }
 
 .transacoes {
-    width: 33em;
-    overflow: hidden;
-    overflow-y: scroll;
-    height: 55vh;
-    padding-top: 3rem;
-
+  width: 33em;
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 55vh;
+  padding-top: 3rem;
 }
 
 .img-logo {
-    width: 100%;
+  width: 100%;
 }
 
 ::-webkit-scrollbar {
-    background-color: #ae1abb69;
-    width: 0.3rem;
-    border-radius: 4px;
+  background-color: #ae1abb69;
+  width: 0.3rem;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-    width: 1rem;
-    background-color: #AE1ABB;
-    border-radius: 4px;
+  width: 1rem;
+  background-color: #ae1abb;
+  border-radius: 4px;
 }
 
-
 .transacoes-all strong {
-    font-size: 1.6em;
+  font-size: 1.6em;
 }
 
 .display-none {
-    display: none;
+  display: none;
 }
 
 .display-block {
-    display: block;
+  display: block;
 }
 
 .deposito {
-    border-bottom: 1px solid #d450e042;
-    line-height: 30px;
-
+  border-bottom: 1px solid #d450e042;
+  line-height: 30px;
 }
 
 .saque {
-    border-bottom: 1px solid #d450e059;
-    line-height: 30px;
-    width: 300px;
-    margin-top: 10px;
-    height: 70px;
+  border-bottom: 1px solid #d450e059;
+  line-height: 30px;
+  width: 300px;
+  margin-top: 10px;
+  height: 70px;
 }
 
 .price {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    position: relative;
-    bottom: 40px;
-    margin-right: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: relative;
+  bottom: 40px;
+  margin-right: 1rem;
 }
 
 .valor-saque {
-    background-image: linear-gradient(to top, #C51FAA, #e72929d8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to top, #c51faa, #e72929d8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .valor-deposito {
-    color: rgba(22, 163, 95, 0.85);
+  color: rgba(22, 163, 95, 0.85);
 }
 
 .deposito strong {
-    font-size: 1.1em;
+  font-size: 1.1em;
 }
 
 .saque strong {
-    font-size: 1.1em;
+  font-size: 1.1em;
 }
 
 .deposito p {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .saque p {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .price strong {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .price-saque strong {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .botoes {
-    display: flex;
-    flex-direction: row;
-    cursor: pointer;
-    position: absolute;
-    bottom: 0;
-    width: 50%;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  width: 50%;
 }
 
 input[type="text"]:focus {
-    border: solid 1px #cfcfcf;
-    border-bottom: #C12ACE solid 2px;
-    padding: 1rem;
+  border: solid 1px #cfcfcf;
+  border-bottom: #c12ace solid 2px;
+  padding: 1rem;
 }
 
 .botao {
-    font-size: 1em;
-    margin-top: 2rem;
-    padding: 0.4rem;
-    background-image: linear-gradient(to top, #e3141ece, #9719a3e3);
-    border: 0;
-    cursor: pointer;
-    color: #ffffff;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    width: 337px;
-    height: 52px;
+  font-size: 1em;
+  margin-top: 2rem;
+  padding: 0.4rem;
+  background-image: linear-gradient(to top, #e3141ece, #9719a3e3);
+  border: 0;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  width: 337px;
+  height: 52px;
 }
 
+@media (min-width: 300px) and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
 
-@media (min-width: 300px) and (max-width:768px) {
-    body {
-        overflow-x: hidden;
-        overflow-y: auto;
-    }
+  .principal {
+    width: 100%;
 
-    .principal {
-        width: 100%;
-        height: 41vh;
-    }
+    height: 41vh;
 
-    .res {
-        opacity: 0;
-        background-color: #2dff992f;
-        color: #21c275;
-        font-weight: bold;
-        text-align: center;
-        width: 300px;
-        font-size: 1rem;
-        transition: 0.4s;
-        margin-top: 10px;
-    }
-    
-    .res.actived {
-        opacity: 1;
-    }
-    
-    /* aviso-error */
-    .resp {
-        opacity: 0;
-        background-color: rgba(245, 7, 7, 0.212);
-        color: rgb(252, 0, 0);
-        font-weight: bold;
-        text-align: center;
-        width: 300px;
-        font-size: 1rem;
-        transition: 0.4s;
-        margin-top: 10px;
-    
-    }
-    
-    .resp.actived2 {
-        opacity: 1;
-    }
+    height: 39vh;
+  }
 
-    .botoes {
-        width: 100%;
-        margin-top: 20px;
-        position: relative;
-    }
-
-    .campo input {
-        width: 300px;
-    }
-
-    .botao {
-        width: 300px;
-    }
-
-    .dados {
-        width: 100%;
-        margin-top: 232px;
-    }
-
-    #form-geral {
-        margin-bottom: 32px;
-    }
-
-    #transacoes-geral {
-        padding: 3rem 2rem;
-    }
-
-    .saque {
-        width: 100%;
-    }
-}
-
-@media (max-width: 1046px) {
-    .layout-2 img {
-        display: none;
-    }
-
-    .transacoes-all {
-        padding: 2rem 3rem;
-    }
-
-    .transacoes {
-        width: 100%;
-    }
-
-    #transacoes-all strong {
-        font-size: 1.2em;
-    }
-
-    .saque strong {
-        font-size: 1em;
-    }
-
-    .deposito strong {
-        font-size: 1em;
-    }
-
-    .deposito p {
-        font-size: 12px;
-    }
-
-    .saque p {
-        font-size: 12px;
-    }
-
-    .price strong {
-        font-size: 16px;
-    }
-
-    .price-saque strong {
-        font-size: 16px;
-    }
-}
-
-/* aviso-successful */
-.res {
+  .res {
     opacity: 0;
     background-color: #2dff992f;
     color: #21c275;
     font-weight: bold;
     text-align: center;
-    width: 18rem;
+    width: 300px;
     font-size: 1rem;
     transition: 0.4s;
     margin-top: 10px;
-}
+  }
 
-.res.actived {
+  .res.actived {
     opacity: 1;
-}
+  }
 
-/* aviso-error */
-.resp {
+  /* aviso-error */
+  .resp {
     opacity: 0;
     background-color: rgba(245, 7, 7, 0.212);
     color: rgb(252, 0, 0);
     font-weight: bold;
     text-align: center;
-    width: 18rem;
+    width: 300px;
     font-size: 1rem;
     transition: 0.4s;
     margin-top: 10px;
+  }
 
+  .resp.actived2 {
+    opacity: 1;
+  }
+
+  .botoes {
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+  }
+
+  .campo input {
+    width: 300px;
+  }
+
+  .botao {
+    width: 300px;
+  }
+
+  .dados {
+    width: 100%;
+    margin-top: 232px;
+  }
+
+  #form-geral {
+    margin-bottom: 32px;
+  }
+
+  #transacoes-geral {
+    padding: 3rem 2rem;
+  }
+
+  .saque {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1046px) {
+  .layout-2 img {
+    display: none;
+  }
+
+  .transacoes-all {
+    padding: 2rem 3rem;
+  }
+
+  .transacoes {
+    width: 100%;
+  }
+
+  #transacoes-all strong {
+    font-size: 1.2em;
+  }
+
+  .saque strong {
+    font-size: 1em;
+  }
+
+  .deposito strong {
+    font-size: 1em;
+  }
+
+  .deposito p {
+    font-size: 12px;
+  }
+
+  .saque p {
+    font-size: 12px;
+  }
+
+  .price strong {
+    font-size: 16px;
+  }
+
+  .price-saque strong {
+    font-size: 16px;
+  }
+}
+
+/* aviso-successful */
+.res {
+  opacity: 0;
+  background-color: #2dff992f;
+  color: #21c275;
+  font-weight: bold;
+  text-align: center;
+  width: 18rem;
+  font-size: 1rem;
+  transition: 0.4s;
+  margin-top: 10px;
+}
+
+.res.actived {
+  opacity: 1;
+}
+
+/* aviso-error */
+.resp {
+  opacity: 0;
+  background-color: rgba(245, 7, 7, 0.212);
+  color: rgb(252, 0, 0);
+  font-weight: bold;
+  text-align: center;
+  width: 18rem;
+  font-size: 1rem;
+  transition: 0.4s;
+  margin-top: 10px;
 }
 
 .resp.actived2 {
-    opacity: 1;
+  opacity: 1;
 }
