@@ -100,7 +100,7 @@ async function fazerDeposito() {
   };
 
   const response = await fetch(
-    `https://api-accounts.fly.dev/accounts${parametroId}/deposit`,
+    `https://api-accounts.fly.dev/accounts/${parametroId}/deposit`,
     init
   );
   const dados = await response.json();
@@ -133,7 +133,7 @@ async function fazerSaque() {
     };
 
     const response = await fetch(
-      `https://api-accounts.fly.dev/accounts${parametroId}/saque`,
+      `https://api-accounts.fly.dev/accounts/${parametroId}/saque`,
       init
     );
     const dados = await response.json();
