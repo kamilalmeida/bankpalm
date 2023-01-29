@@ -87,7 +87,7 @@ async function fazerDeposito() {
   let objConta = {
     amount: Number(elementCurrentBalance.value),
     data: gerarData(),
-    tipo: "deposito",
+    type: "deposito",
   };
 
   // chamar post por ID na API
@@ -120,7 +120,7 @@ async function fazerSaque() {
     const objConta = {
       amount: Number(amount.value),
       data: gerarData(),
-      tipo: "saque",
+      type: "saque",
     };
 
     // chamar post por ID na API
@@ -177,10 +177,10 @@ function gerarHTML(dados) {
     let valorSaque = dado.valor;
     const element = `
     <div class="saque">
-        <strong>${dado.tipo == "deposito" ? "Depósito" : "Saque"}</strong>
+        <strong>${dado.type == "deposito" ? "Depósito" : "Saque"}</strong>
         <p>${date}</p>
         <div class="price ${
-          dado.tipo == "deposito" ? "valor-deposito" : "valor-saque"
+          dado.type == "deposito" ? "valor-deposito" : "valor-saque"
         }">
         <strong>R$ ${valorSaque}</strong>
         </div>
