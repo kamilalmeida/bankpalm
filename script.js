@@ -18,7 +18,7 @@ async function criarConta() {
 
     try {
       const response = await fetch(
-        "https://api-accounts.fly.dev/accounts",
+        "https://app-api-aplication.herokuapp.com/accounts/",
         init
       );
       const dados = await response.json();
@@ -58,7 +58,7 @@ async function getContentPorId() {
   // chamar GET na API
 
   const response = await fetch(
-    `https://api-accounts.fly.dev/accounts${parametroId}`,
+    `https://app-api-aplication.herokuapp.com/accounts/${parametroId}`,
     init
   );
   const dados = await response.json();
@@ -100,7 +100,7 @@ async function fazerDeposito() {
   };
 
   const response = await fetch(
-    `https://api-accounts.fly.dev/accounts${parametroId}/deposit`,
+    `https://app-api-aplication.herokuapp.com/accounts/${parametroId}/deposit`,
     init
   );
   const dados = await response.json();
@@ -133,7 +133,7 @@ async function fazerSaque() {
     };
 
     const response = await fetch(
-      `https://api-accounts.fly.dev/accounts${parametroId}/saque`,
+      `https://app-api-aplication.herokuapp.com/accounts/${parametroId}/saque`,
       init
     );
     const dados = await response.json();
